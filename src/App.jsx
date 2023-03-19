@@ -31,7 +31,7 @@ function App() {
     } else {
       setBackground("default");
     }
-  }, [current]);
+  }, [current,mainCondition]);
 
   console.log(background);
   return (

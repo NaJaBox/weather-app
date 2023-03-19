@@ -5,7 +5,7 @@ import { WeatherContext } from "../WeatherContext/WeatherContext";
 
 export const Search = () => {
   const [location, setLocation] = useState("");
-  const { current, setCurrent } = useContext(WeatherContext);
+  const { setCurrent } = useContext(WeatherContext);
 
   const options = {
     method: "GET",
@@ -49,8 +49,6 @@ export const Search = () => {
         window.location.href = "/home";
       });
   };
-
-
 
   return (
     <div>
