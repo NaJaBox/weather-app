@@ -1,0 +1,76 @@
+.firstCard {
+  width: 330px;
+  height: 130px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.53);
+}
+
+.location {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+
+  .city {
+    font-weight: bold;
+    color: whitesmoke;
+  }
+
+  .country {
+    color: whitesmoke;
+  }
+
+  .localTime {
+    font-size: 10px;
+    color: whitesmoke;
+  }
+}
+
+.shortWeather {
+  display: flex;
+
+  .localTemp {
+    width: 60px;
+    font-size: 4.5rem;
+    font-weight: bolder;
+    margin-left: 1rem;
+    color: rgb(166, 170, 209);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  button {
+    background: none;
+    border: none;
+  }
+
+  .tempC,
+  .tempF {
+    cursor: pointer;
+    color: rgb(166, 170, 209);
+
+    &:focus {
+      color: greenyellow;
+    }
+  }
+
+  .divider {
+    margin-left: 2px;
+    margin-right: 2px;
+    color: rgb(156, 133, 133);
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .condition {
+    transform: rotate(90deg);
+    color: rgb(211, 211, 211);
+  }
+}

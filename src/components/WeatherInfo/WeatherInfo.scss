@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.infoCard {
+  width: 330px;
+  height: 130px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.53);
+
+  .localTime {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+
+    .time {
+      margin-top: 10px;
+      font-size: 2rem;
+      color: rgb(166, 170, 209)
+    }
+
+    .date {
+      margin-top: 10px;
+      font-size: 14px;
+      color: rgb(245, 227, 227);
+    }
+  }
+
+  .message {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    color: rgb(211, 211, 211);
+    font-size: 14px;
+  }
+}
+// .sunny {
+//   background: yellow;
+//   width: 330px;
+//   height: 130px;
+//   margin: auto;
+//   margin-top: 10px;
+//   border-radius: 20px;
+//   background: rgba(0, 0, 0, 0.23);
+// }
+// .rainy {
+//   background: blue;
+//   width: 330px;
+//   height: 130px;
+//   margin: auto;
+//   margin-top: 10px;
+//   border-radius: 20px;
+//   background: rgba(0, 0, 0, 0.23);
+// }
+// .cloudy {
+//   background: grey;
+//   width: 330px;
+//   height: 130px;
+//   margin: auto;
+//   margin-top: 10px;
+//   border-radius: 20px;
+//   background: rgba(0, 0, 0, 0.23);
+// }
+// .snowy {
+//   background: white;
+//   width: 330px;
+//   height: 130px;
+//   margin: auto;
+//   margin-top: 10px;
+//   border-radius: 20px;
+//   background: rgba(0, 0, 0, 0.23);
+// }

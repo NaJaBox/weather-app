@@ -1,0 +1,74 @@
+.WeatherDetailsCard {
+  width: 330px;
+  height: 130px;
+  margin: auto;
+  margin-top: 50px;
+  bottom: 50px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.53);
+}
+
+.cardContainer1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 90%;
+  height: 60%;
+  margin: auto;
+
+  .col1,
+  .col2,
+  .col3,
+  .col4 {
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+
+    .unitKM,
+    .unitM {
+      font-size: 10px;
+    }
+  }
+}
+
+.divider hr,
+.dividerShort hr {
+  margin: auto;
+  width: 90%;
+  opacity: 0.3;
+}
+
+.cardContainer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.minC,
+.minF {
+  font-size: 12px;
+}
+
+.txtCol1,
+.txtCol2,
+.txtCol3,
+.txtCol4,
+.txtCol5,
+.txtCol6,
+.txtCol7 {
+  color: #6fb8f9
+}
+
+.dataCol1,
+.dataCol2,
+.dataCol3,
+.dataCol4 {
+  color: rgb(211, 211, 211)
+}
+
+.dataCol5,
+.dataCol6,
+.dataCol7 {
+  color: rgb(211, 211, 211)
+}

@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  background: aquamarine;
+}
+
+.sunny {
+  background-image: url("./images/sunny.jpeg");
+  background-size: cover;
+}
+.rainy {
+  background-image: url("./images/rainy.jpg");
+  background-size: cover;
+}
+.cloudy {
+  background-image: url("./images/cloudy.jpg");
+  background-size: cover;
+}
+.snowy {
+  background-image: url("./images/snowy.jpg");
+  background-size: cover;
+}
+
+.default {
+  background-image: url("./images/default.jpg");
+  background-position: right;
+  background-size: cover;
+}
