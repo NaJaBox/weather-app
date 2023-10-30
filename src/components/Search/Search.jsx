@@ -24,7 +24,7 @@ export const Search = () => {
     } else {
       console.log("Geolocation is not supported"); // Debugging statement
     }
-  }, []);
+  });
 
   const fetchWeatherData = (latitude, longitude) => {
     setError(null);
