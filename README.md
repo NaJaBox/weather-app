@@ -1,4 +1,6 @@
-![Alt text](/public/mockup.png?raw=true "Optional Title")
+![Alt text](/public/mockup.PNG?raw=true "Optional Title")
+
+
 
 # Weather App
 
