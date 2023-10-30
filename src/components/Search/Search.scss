@@ -4,25 +4,23 @@ form {
   align-items: center;
 
   input {
-    border-radius: 15px;
+    border-radius: 10px;
+    border: none;
     height: 30px;
     padding: 10px;
     margin-top: 50px;
   }
-
-  button {
-    border: none;
-    // background-color: transparent;
-    background: (0, 0, 0, 0.53);
-    border-radius: 50px;
-    margin-left: 10px;
-    margin-top: 50px;
-    width: 30px;
-    height: 30px;
-    background-image: url("./../../images/looking-glass.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-  }
+}
+button {
+  border: none;
+  background-color: transparent;
+  border-radius: 50px;
+  margin-left: 10px;
+  margin-top: 50px;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }

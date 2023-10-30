@@ -2,10 +2,10 @@
   width: 330px;
   height: 130px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: var(--cardMT);
   bottom: 50px;
   border-radius: 20px;
-  background: rgba(0, 0, 0, 0.53);
+  background: var(--bgCLR);
 }
 
 .cardContainer1 {
@@ -64,11 +64,11 @@
 .dataCol2,
 .dataCol3,
 .dataCol4 {
-  color: rgb(211, 211, 211)
+  color: var(--secondaryCLR);
 }
 
 .dataCol5,
 .dataCol6,
 .dataCol7 {
-  color: rgb(211, 211, 211)
+  color: var(--secondaryCLR);
 }

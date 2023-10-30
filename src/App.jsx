@@ -7,10 +7,12 @@ import { WeatherForecast } from "./components/WeatherForecast/WeatherForecast";
 import { WeatherInfo } from "./components/WeatherInfo/WeatherInfo";
 import WeatherMain from "./components/WeatherMain/WeatherMain";
 import { cloudy, rainy, snowy } from "./conditions.js";
+import Loader from "./components/Loader/Loader";
+
 function App() {
   
   const [background, setBackground] = useState("");
-  const { current } = useContext(WeatherContext);
+  const { current, loading } = useContext(WeatherContext);
 
   const mainCondition =
     current && current.current ? current.current.condition.text : null;
@@ -31,16 +33,22 @@ function App() {
     } else {
       setBackground("default");
     }
-  }, [current,mainCondition]);
+  }, [mainCondition]);
 
-  console.log(background);
+  
   return (
     <div className={`App ${background}`}>
       <Search />
-      <WeatherMain />
-      <WeatherDetails />
-      <WeatherInfo />
-      <WeatherForecast />
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <WeatherMain />
+          <WeatherDetails />
+          <WeatherInfo />
+          <WeatherForecast />
+        </>
+      )}
     </div>
   );
 }

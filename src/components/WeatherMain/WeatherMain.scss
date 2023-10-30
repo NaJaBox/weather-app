@@ -1,13 +1,13 @@
 .firstCard {
   width: 330px;
-  height: 130px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: calc(var(--cardMT) + 10px);
   border-radius: 20px;
-  background: rgba(0, 0, 0, 0.53);
+  background: var(--bgCLR);
 }
 
 .location {
+  padding-top: 15px;
   display: flex;
   align-items: baseline;
   justify-content: center;
@@ -36,31 +36,30 @@
     font-size: 4.5rem;
     font-weight: bolder;
     margin-left: 1rem;
-    color: rgb(166, 170, 209);
-  }
-
-  p {
-    margin: 0;
+    color: var(--primaryCLR);
   }
 
   button {
-    background: none;
+    background: transparent;
     border: none;
   }
 
   .tempC,
   .tempF {
     cursor: pointer;
-    color: rgb(166, 170, 209);
+    color: var(--primaryCLR);
 
-    &:focus {
+    &:focus,
+    &:active {
       color: greenyellow;
     }
   }
+  .tempC.active,
+  .tempF:active {
+    color: greenyellow;
+  }
 
   .divider {
-    margin-left: 2px;
-    margin-right: 2px;
     color: rgb(156, 133, 133);
   }
 
@@ -71,6 +70,24 @@
 
   .condition {
     transform: rotate(90deg);
-    color: rgb(211, 211, 211);
+    color: var(--secondaryCLR);
+  }
+}
+
+.tempNow {
+  width: 35%;
+  height: 100%;
+  position: relative;
+}
+.unitBtn {
+  width: 5rem;
+  height: 2rem;
+  position: absolute;
+  top: 0;
+  left: 70px;
+
+  button {
+    padding: 0;
+    margin: 0;
   }
 }

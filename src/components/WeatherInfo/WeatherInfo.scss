@@ -6,11 +6,16 @@
 
 .infoCard {
   width: 330px;
-  height: 130px;
+  // height: 130px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: var(--cardMT);
   border-radius: 20px;
-  background: rgba(0, 0, 0, 0.53);
+  background: var(--bgCLR);
+
+  h3 {
+    padding-top: 5px;
+    color: var(--primaryCLR);
+  }
 
   .localTime {
     display: flex;
@@ -22,7 +27,7 @@
     .time {
       margin-top: 10px;
       font-size: 2rem;
-      color: rgb(166, 170, 209)
+      color: var(--primaryCLR);
     }
 
     .date {
@@ -36,8 +41,9 @@
     width: 90%;
     margin: auto;
     margin-top: 10px;
-    color: rgb(211, 211, 211);
+    color: var(--secondaryCLR);
     font-size: 14px;
+    padding-bottom: 10px;
   }
 }
 // .sunny {

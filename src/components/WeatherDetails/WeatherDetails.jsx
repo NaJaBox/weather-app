@@ -30,6 +30,10 @@ const WeatherDetails = () => {
     current && current.current
       ? Math.round(current.forecast.forecastday[0].day.maxtemp_f)
       : null;
+  const pressure_mb =
+    current && current.current ? Math.round(current.current.pressure_mb) : null;
+  const pressure_in =
+    current && current.current ? Math.round(current.current.pressure_in) : null;
 
   if (!current) {
     return <div></div>;
@@ -87,7 +91,22 @@ const WeatherDetails = () => {
             <hr />
           </span>
 
-          <div className="dataCol3">{current.current.pressure_mb}</div>
+          <div className="dataCol3">
+            {current && (
+              <div>
+                {metric ? (
+                  <span>
+                    {pressure_mb} <span className="unitKM">mb</span>
+                  </span>
+                ) : (
+                  <span>
+                    {pressure_in} <span className="unitM">in</span>
+                  </span>
+                )}
+              </div>
+            )}
+            {/* {current.current.pressure_mb} */}
+          </div>
         </div>
 
         <div className="col4">

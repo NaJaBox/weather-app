@@ -3,8 +3,6 @@ import { useContext } from "react";
 import { WeatherContext } from "../WeatherContext/WeatherContext";
 import { cloudy, rainy, snowy } from "./../../conditions.js";
 
-
-
 export const WeatherInfo = () => {
   const { current } = useContext(WeatherContext);
 
@@ -20,23 +18,14 @@ export const WeatherInfo = () => {
     day: "numeric",
   });
 
-  const timeString = date.toLocaleTimeString("en-US", {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-  });
-
-  // const formattedDate = `${timeString}  ${dateString}`;
-  // console.log(formattedDate);
-
   const nextHour = new Date(localTime);
   nextHour.setHours(nextHour.getHours() + 1);
 
-  const nextHourData = current.forecast.forecastday.find(
-    (day) => day.date === nextHour.toISOString().slice(0, 10)
-  );
   const hour = nextHour.getHours();
-  const condition = nextHourData.hour[hour].condition.text || "default";
+  const minutes = nextHour.getMinutes();
+
+  const condition =
+    current.forecast.forecastday[0].hour[hour].condition.text || "default";
 
   let message;
 
@@ -62,8 +51,11 @@ export const WeatherInfo = () => {
   return (
     <>
       <div className="infoCard">
+        <h3>In one hour from now...</h3>
         <div className="localTime">
-          <div className="time">{timeString}</div>
+          <div className="time">
+            {`${hour}:${minutes < 10 ? "0" : ""}${minutes}`}
+          </div>
           <div className="date">{dateString}</div>
         </div>
         <div className="message">{message}</div>

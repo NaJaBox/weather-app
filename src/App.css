@@ -1,7 +1,12 @@
 .App {
   text-align: center;
   height: 100vh;
-  background: aquamarine;
+  /* background-image: url("./images/default.jpg"); */
+
+  --cardMT: 30px;
+  --bgCLR: rgba(0, 0, 0, 0.53);
+  --primaryCLR: rgb(166, 170, 209);
+  --secondaryCLR: rgb(211, 211, 211);
 }
 
 .sunny {

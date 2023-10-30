@@ -2,13 +2,11 @@ import "./WeatherMain.scss";
 import { useContext } from "react";
 import { WeatherContext } from "../WeatherContext/WeatherContext";
 
-
 function WeatherMain() {
- 
   const { current, metric, toggleMetric, toggleImperial } =
     useContext(WeatherContext);
   // console.log(current);
- 
+
   const tempC =
     current && current.current ? Math.round(current.current.temp_c) : null;
   const tempF =
@@ -20,10 +18,6 @@ function WeatherMain() {
 
   return (
     <>
-      {/* <WeatherContext.Provider value={{ metric, toggleMetric, toggleImperial }}>
-        <WeatherDetails />
-        <WeatherForecast />
-      </WeatherContext.Provider> */}
       <div className="firstCard">
         <div className="location">
           <div className="city">{current.location.name}</div>
@@ -32,24 +26,27 @@ function WeatherMain() {
         </div>
 
         <div className="shortWeather">
-          <div>
+          <div className="tempNow">
             {current && (
               <div className="localTemp">
-                {metric ? <p>{tempC}</p> : <p>{tempF}</p>}
+                {metric ? <span>{tempC}</span> : <span>{tempF}</span>}
               </div>
             )}
-          </div>
-          <div className="unitBtn">
-            <button className="tempC" onClick={toggleMetric}>
-              °C
-            </button>
-            <span className="divider">|</span>
-            <button className="tempF" onClick={toggleImperial}>
-              °F
-            </button>
+            <div className="unitBtn">
+              <button
+                className={`tempC ${metric ? "active" : ""}`}
+                onClick={toggleMetric}
+              >
+                °C
+              </button>
+              <span className="divider">|</span>
+              <button className="tempF" onClick={toggleImperial}>
+                °F
+              </button>
+            </div>
           </div>
           <div className="icon">
-            <img src={current.current.condition.icon} alt="" />
+            <img src={current.current.condition.icon} alt="weather icon" />
           </div>
           <div className="condition">{current.current.condition.text}</div>
         </div>
